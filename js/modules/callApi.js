@@ -47,7 +47,7 @@ export function setNewCity( cityToDisplay ) {
 export async function weatherInfo() {
 
     if ( !userIsGeolocate ) {
-        url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${cityApiKey}&units=${units}`;
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${cityApiKey}&units=${units}`;
     } else if ( userIsGeolocate ) {
         url = `https://api.openweathermap.org/data/2.5/weather?lat=${userLatitude}&lon=${userLongitude}&appid=${geolocateApiKey}&units=${units}`
     }
