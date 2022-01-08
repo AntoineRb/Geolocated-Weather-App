@@ -48,12 +48,8 @@ export async function weatherInfo() {
 
     if ( !userIsGeolocate ) {
         url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
-        console.log(url);
-        console.log(userIsGeolocate);
     } else if ( userIsGeolocate ) {
         url = `https://api.openweathermap.org/data/2.5/weather?lat=${userLatitude}&lon=${userLongitude}&appid=${geolocateApiKey}&units=${units}`
-        console.log(url);
-        console.log(userIsGeolocate);
     }
     
 
